@@ -1,14 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projet web</title>
 </head>
 <body>
-    <h1>
-        eooooro
-    </h1>
+    <header class="navbar">
+        <div class="logoPart">
+        <img class="logoImage" src="/images/brand.png">
+        <span>
+            bauhaus 
+        </span>
+        <span>
+            Architecture
+        </span>
+        </div>
+        <div class="socials">
+            <a>
+                <img class="icon" src="/icons/facebook_black_24dp.svg"></img>
+            </a>
+            <a>
+                <img class="icon" src="/icons/facebook_black_24dp.svg"></img>
+            </a>
+            <a>
+                <img class="icon" src="/icons/facebook_black_24dp.svg"></img>
+            </a>
+            <a>
+                <img class="icon" src="/icons/facebook_black_24dp.svg"></img>
+            </a>
+            <a>
+                <img class="icon" src="/icons/facebook_black_24dp.svg"></img>
+            </a>
+        </div>
+        <div class="phoneNumber">
+            CALL US: (+080) 9684 32 45 789
+        </div>
+    </header>
+    <main class="main">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="/images/slide1.jpg" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="/images/slide2.jpg" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="/images/slide3.jpg" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="/images/slide4.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+              </div>
+          
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+        <div class="aboutUs">
+            <div class="aboutUsText">
+                <div class="aboutUsText2">
+                <h3 style="color: #cee002;">ABOUT US</h3>
+                <h2>We Are The Leader In The Architectural</h2>
+                <p>For each project we establish relationships with partners who we know will help us create added value for your project. 
+                    As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other</p>
+                </div>
+                <div class="aboutUsExperience">
+                    <div class="experienceBorder"></div>
+                    <div class="experienceContent">
+                        <div class="experienceNumber">
+                            26
+                        </div>
+                    <div class="experienceInfo">
+                        years
+                        <br>
+                        experience 
+                        <br>
+                        working
+                    </div>   
+                    </div>
+                </div>
+            </div>
+            <div class="aboutUsImg">
+                <img src="/images/about.jpg">
+            </div>
+        </div>
+        <br>
+        <div class="projects">
+            <div class="projectsTitle">
+                <h2> Latest projects </h2>
+            </div>
+        </div>
+    </main>
+
 </body>
+
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
 </html>

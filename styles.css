@@ -37,6 +37,162 @@
     left: 10rem;
 }
 
+.projectsTitles {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.projectsSubtitle1 {
+    margin-right: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.itemHoverSeeProject {
+    position: absolute;
+    z-index: 2;
+    bottom: 5rem;
+    left: 3rem;
+    color: white;
+}
+
+.itemHoverDescription {
+    position: relative;
+    display: none;
+}
+
+.item:hover + .itemHoverDescription {
+    display: flex;
+  }
+
+.itemHover {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+.item:hover {
+    background-color: #cee002;
+}
+.image:hover {
+    opacity: 0.5;
+}
+
+.itemHoverTitle {
+    position: absolute;
+    bottom: 7rem;
+    left: 3rem;
+    color: white;
+}
+
+.newsImage:hover + .newsText {
+    display: flex;
+}
+
+.newsText {
+    position: relative;
+    display: none;
+}
+.clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerLang:hover {
+    color: #cee002;
+}
+
+.newsTextDisplayed {
+    position: absolute;
+    right: 16rem;
+}
+
+.item {
+    margin: 10px;
+}
+
+footer {
+    display: flex;
+    align-items: flex-start;
+    padding: 60px 0;
+    flex-wrap: wrap;
+  }
+footer > div{
+    margin: 0 auto;
+}
+
+.avis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+}
+
+.newsImage {
+    margin: 10px;
+}
+
+.newsImage:hover {
+    background-color: white;
+    opacity: 0.1;
+    border: 3px solid #cee002;
+}
+
+.newsImages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.avisClient {
+    padding: 30px;
+    position: relative;
+    color: #999;
+    background-color: #f7f7f7;
+    margin: 10px;
+}
+
+.avispicture {
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    top: 15%;
+    left: 5%;
+}
+
+.itemDisplayedTitle {
+    position: absolute;
+    right: 20rem;
+    z-index: 2;
+}
+
+.projectsImage:hover {
+    opacity: 0.5;
+}
+
+.projectsPictures {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.projectsSubtitle2 {
+    color: grey;
+    font-style: italic;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.projectsSubtitle {
+    display: flex;
+    flex-direction: row;
+}
+
 .experienceNumber {
     font-size: 50px;
     font-weight: 400;
@@ -71,9 +227,14 @@
 .aboutUsText {
     display: flex;
     flex-direction: column;
+    max-width: 300px;
 }
 
-a:hover {
+.projectsSubtitle1:hover {
+    color: yellow;
+}
+
+.iconSocials:hover {
     background-color: yellow;
   }
 
@@ -82,8 +243,9 @@ a:hover {
   /* Slideshow container */
   .slideshow-container {
     max-width: 95%;
+    max-height: 95%;
     position: relative;
-    margin: auto;
+    margin: 40px auto 0px auto ;
   }
   
   /* Hide the images by default */
@@ -106,19 +268,49 @@ a:hover {
     border-radius: 0 3px 3px 0;
     user-select: none;
   }
+
+  @media(max-width: 1180px) {
+    .projectsTitles {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 1300px) {
+    .aboutUs {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 990px) {
+
+    .avis {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 768px) {
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer > div {
+        margin: 10px;
+        text-align: center;
+    }
+}
   
-  /* Position the "next button" to the right */
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
   
-  /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
   }
   
-  /* Caption text */
   .text {
     color: #f2f2f2;
     font-size: 15px;
@@ -129,7 +321,6 @@ a:hover {
     text-align: center;
   }
   
-  /* Number text (1/3 etc) */
   .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -138,7 +329,6 @@ a:hover {
     top: 0;
   }
   
-  /* The dots/bullets/indicators */
   .dot {
     cursor: pointer;
     height: 15px;
@@ -154,7 +344,6 @@ a:hover {
     background-color: #717171;
   }
   
-  /* Fading animation */
   .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
